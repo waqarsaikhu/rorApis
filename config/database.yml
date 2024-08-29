@@ -1,0 +1,12 @@
+default: &default
+  adapter: <%= ENV.fetch('DB_ADAPTER', 'postgresql') %>
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: 1124  # Ensure this matches the role's password
+
+development:
+  <<: *default
+  database: myapp_dev
+  host: localhost
+  port: <%= ENV.fetch('DB_PORT', 3001) %>
