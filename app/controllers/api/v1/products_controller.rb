@@ -1,4 +1,9 @@
 class Api::V1::ProductsController < ApplicationController
+
+  include Authenticable
+
+  before_action :authenticate_request, only: [:index, :show, :create, :update, :destroy]
+
   def index
     products = Product.all  
     render json: products, status: 200
