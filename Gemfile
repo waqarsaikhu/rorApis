@@ -25,6 +25,8 @@ gem "bootsnap", require: false
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 gem 'net-pop'
+gem 'rubocop', require: false
+gem 'rubocop-rails', require: false
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
